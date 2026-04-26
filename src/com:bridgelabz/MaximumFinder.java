@@ -1,6 +1,16 @@
 package com.bridgelabz;
 
-public class MaximumFinder {
+public class MaximumFinder<T extends Comparable<T>> {
+
+    private T x;
+    private T y;
+    private T z;
+
+    public MaximumFinder(T x, T y, T z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
 
     public static <T extends Comparable<T>> T testMaximum(T x, T y, T z) {
         T max = x;
@@ -14,5 +24,9 @@ public class MaximumFinder {
         }
 
         return max;
+    }
+
+    public T testMaximum() {
+        return MaximumFinder.testMaximum(x, y, z);
     }
 }

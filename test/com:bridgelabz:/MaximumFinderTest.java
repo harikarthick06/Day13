@@ -58,4 +58,10 @@ public class MaximumFinderTest {
         String max = MaximumFinder.testMaximum("Apple", "Banana", "Peach");
         Assert.assertEquals("Peach", max);
     }
+    @Test
+    public void givenThreeIntegersUsingGenericClass_ShouldReturnMaximum() {
+        MaximumFinder<Integer> maximumFinder = new MaximumFinder<>(10, 20, 30);
+        Integer max = maximumFinder.testMaximum();
+        Assert.assertEquals(Integer.valueOf(30), max);
+}
 }
