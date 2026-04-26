@@ -40,34 +40,36 @@ public class MaximumFinderTest {
         Float max = MaximumFinder.testMaximum(10.5f, 20.5f, 30.5f);
         Assert.assertEquals(Float.valueOf(30.5f), max);
     }
+
     @Test
-    public void givenMaxStringAtFirstPosition_ShouldReturnSameString() 
-    {
+    public void givenMaxStringAtFirstPosition_ShouldReturnSameString() {
         String max = MaximumFinder.testMaximum("Peach", "Apple", "Banana");
         Assert.assertEquals("Peach", max);
     }
+
     @Test
-    public void givenMaxStringAtSecondPosition_ShouldReturnSameString() 
-    {
+    public void givenMaxStringAtSecondPosition_ShouldReturnSameString() {
         String max = MaximumFinder.testMaximum("Apple", "Peach", "Banana");
         Assert.assertEquals("Peach", max);
     }
+
     @Test
-    public void givenMaxStringAtThirdPosition_ShouldReturnSameString() 
-    {
+    public void givenMaxStringAtThirdPosition_ShouldReturnSameString() {
         String max = MaximumFinder.testMaximum("Apple", "Banana", "Peach");
         Assert.assertEquals("Peach", max);
     }
+
     @Test
     public void givenThreeIntegersUsingGenericClass_ShouldReturnMaximum() {
         MaximumFinder<Integer> maximumFinder = new MaximumFinder<>(10, 20, 30);
         Integer max = maximumFinder.testMaximum();
+
         Assert.assertEquals(Integer.valueOf(30), max);
+    }
 
     @Test
     public void givenMoreThanThreeIntegers_ShouldReturnMaximum() {
         Integer max = MaximumFinder.testMaximum(10, 20, 30, 40, 50);
         Assert.assertEquals(Integer.valueOf(50), max);
-}
-}
+    }
 }
