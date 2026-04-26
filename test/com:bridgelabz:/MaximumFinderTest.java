@@ -63,5 +63,11 @@ public class MaximumFinderTest {
         MaximumFinder<Integer> maximumFinder = new MaximumFinder<>(10, 20, 30);
         Integer max = maximumFinder.testMaximum();
         Assert.assertEquals(Integer.valueOf(30), max);
+
+    @Test
+    public void givenMoreThanThreeIntegers_ShouldReturnMaximum() {
+        Integer max = MaximumFinder.testMaximum(10, 20, 30, 40, 50);
+        Assert.assertEquals(Integer.valueOf(50), max);
+}
 }
 }
