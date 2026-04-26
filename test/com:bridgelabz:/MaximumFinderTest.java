@@ -22,4 +22,22 @@ public class MaximumFinderTest {
         Integer max = MaximumFinder.testMaximum(10, 20, 30);
         Assert.assertEquals(Integer.valueOf(30), max);
     }
+
+    @Test
+    public void givenMaxFloatAtFirstPosition_ShouldReturnSameNumber() {
+        Float max = MaximumFinder.testMaximum(30.5f, 20.5f, 10.5f);
+        Assert.assertEquals(Float.valueOf(30.5f), max);
+    }
+
+    @Test
+    public void givenMaxFloatAtSecondPosition_ShouldReturnSameNumber() {
+        Float max = MaximumFinder.testMaximum(20.5f, 30.5f, 10.5f);
+        Assert.assertEquals(Float.valueOf(30.5f), max);
+    }
+
+    @Test
+    public void givenMaxFloatAtThirdPosition_ShouldReturnSameNumber() {
+        Float max = MaximumFinder.testMaximum(10.5f, 20.5f, 30.5f);
+        Assert.assertEquals(Float.valueOf(30.5f), max);
+    }
 }
